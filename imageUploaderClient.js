@@ -8,7 +8,7 @@ const s3 = new AWS.S3();
 const bucket = new AWS.S3({ params: { Bucket: '7hack' } });
 const baseURL = 'https://s3.eu-central-1.amazonaws.com/7hack/';
 
-module.exports = (base64Image) => {
+module.exports = (base64Image, callback) => {
     var url = '';
 
     buf = new Buffer(base64Image.replace(/^data:image\/\w+;base64,/, ""), 'base64');
@@ -27,8 +27,8 @@ module.exports = (base64Image) => {
         } else {
             console.log(data);
             console.log('succesfully uploaded the image!');
-            url = baseURL + metaData.Key
+            url = baseURL + metaData.Key;
+            callback(url);
         }
     });
-    return url;
 };

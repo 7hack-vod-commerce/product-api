@@ -1,4 +1,7 @@
-module.exports = function (req, res) {
+const imageUploaderClient = require('./imageUploaderClient');
+const imageRecognitionClient = require('./imageRecognitionClient');
+
+module.exports = (req, res) => {
     if (!req.body) return res.sendStatus(400);
 
     var data = {
@@ -7,6 +10,13 @@ module.exports = function (req, res) {
         vendor: req.body.vendor,
         keyframe: req.body.keyframe
     };
+
+// var imageUrl = imageUploaderClient(data.image, 
+//     imageRecognitionClient (imageUrl, databaseClient()));
+
+//    var mergedTags = mergedTags(databaseTags, imageRecognitionTags);
+//    var result = performAPISearch(mergedTags);
+
 
     result = '';
 
