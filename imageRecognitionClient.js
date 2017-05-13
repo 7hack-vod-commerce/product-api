@@ -12,8 +12,8 @@ module.exports = (imageUrl, callback) => {
             url: imageUrl
         }
     }, function (error, response, body){
-        console.log(response);
-        callback(response);
+        if (error) response.sendStatus(400);
+        callback(body);
     });
 }
 

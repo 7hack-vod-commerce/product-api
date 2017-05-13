@@ -21,12 +21,8 @@ module.exports = (base64Image, callback) => {
 
     bucket.putObject(metaData, function(err, data) {
         if (err) {
-            console.log(err);
-            console.log('Error uploading data: ', data);
             res.status(400).send(err);
         } else {
-            console.log(data);
-            console.log('succesfully uploaded the image!');
             url = baseURL + metaData.Key;
             callback(url);
         }

@@ -1,5 +1,6 @@
 const imageUploaderClient = require('./imageUploaderClient');
 const imageRecognitionClient = require('./imageRecognitionClient');
+const databaseClient = require('./databaseClient');
 
 module.exports = (req, res) => {
     if (!req.body) return res.sendStatus(400);
@@ -11,14 +12,12 @@ module.exports = (req, res) => {
         keyframe: req.body.keyframe
     };
 
-// var imageUrl = imageUploaderClient(data.image, 
-//     imageRecognitionClient (imageUrl, databaseClient()));
+    var products = databaseClient(data.assetId, data.vendor, data.keyframe);
 
-//    var mergedTags = mergedTags(databaseTags, imageRecognitionTags);
-//    var result = performAPISearch(mergedTags);
+    imageUploaderClient(data.image, url => {
+        imageRecognitionClient(url, tags => {
+        });
+    });
 
-
-    result = '';
-
-    res.status(200).send(result);
+    res.sendStatus(200);
 };
