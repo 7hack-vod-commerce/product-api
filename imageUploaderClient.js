@@ -9,10 +9,6 @@ const bucket = new AWS.S3({ params: { Bucket: '7hack' } });
 const baseURL = 'https://s3.eu-central-1.amazonaws.com/7hack/';
 
 module.exports = (base64Image) => {
-    console.log('Received image post request');
-
-    if (!req.body) return res.sendStatus(400);
-    var base64Image = req.body.base64Image;
     var url = '';
 
     buf = new Buffer(base64Image.replace(/^data:image\/\w+;base64,/, ""), 'base64');
