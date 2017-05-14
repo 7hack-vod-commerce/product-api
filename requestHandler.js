@@ -18,7 +18,6 @@ module.exports = (req, res) => {
         };
 
         let products = databaseClient(data.assetId, data.vendor, data.keyframe);
-        products = products.slice(0, 1).concat(products.slice(1);
 
         var wetter = new wettercomClient('7hack', 'hacktheweather');
 
