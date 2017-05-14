@@ -66,7 +66,9 @@ module.exports = (req, res) => {
             });
         });
     } else {
-        res.json(products.slice(0,4));
+        setTimeout(() => {
+            res.json(products.slice(0, 4));
+        }, 2000);
     }
 
 };
