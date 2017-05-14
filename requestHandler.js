@@ -42,15 +42,17 @@ module.exports = (req, res) => {
         if (!req.url.toLowerCase().includes('mock')) {
             imageUploaderClient(data.image, url => {
                 imageRecognitionClient(url, tags => {
+                    let usedTags = tags;
+
                     if (tags.length == 0) {
-                        tags = [
+                      usedTags = [
                             { category: 'tank top', detail: 'white' },
                             { category: 'shirt', detail: 'white' }
                         ]
                     }
 
                     var s = new stylightClient('H6490912AB3211E680F576304DEC7EB7');
-                    async.map(tags.filter(t => t.category.toLowerCase() != 'location'), (t, cb) => {
+                    async.map(usedTags.filter(t => t.category && t.category.toLowerCase() != 'location'), (t, cb) => {
                         const query = t.category + ' ' + t.detail;
                         s.products(query, productResult => {
                             console.log(productResult);
