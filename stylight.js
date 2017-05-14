@@ -23,8 +23,6 @@ module.exports = class StylightApi {
             json: true
         };
 
-        console.log('GET: ' + path);
-
         const req = http.get(options, function (res) {
             res.setEncoding('utf-8');
 

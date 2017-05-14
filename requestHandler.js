@@ -17,6 +17,11 @@ module.exports = (req, res) => {
 
     var products = databaseClient(data.assetId, data.vendor, data.keyframe);
 
+    // if (products.length >= 3) {
+    //     res.status(200).send(products.slice(0,2));
+    //     return;
+    // }
+
     imageUploaderClient(data.image, url => {
         imageRecognitionClient(url, tags => {
             var s = new stylightClient('H6490912AB3211E680F576304DEC7EB7');
@@ -26,9 +31,9 @@ module.exports = (req, res) => {
                     var products = productResult.products.map(p => {
                         return {
                             brand: p.brand.name,
-                            name: p.name,
+                            detail: p.name,
                             url: p.url,
-                            imageUrl: p.images.filter(i => i.primary)[0].url,
+                            image: p.images.filter(i => i.primary)[0].url,
                             category: t.category.charAt(0).toUpperCase() + t.category.slice(1)
                         };
                     });
@@ -36,7 +41,8 @@ module.exports = (req, res) => {
                 });
             }, (err, result) => {
                 if (!!err) res.sendStatus(400);
-                res.json(result);
+                let aiProds = result.slice(0,2);
+                res.json(products.slice(0, 4 - aiProds.length).concat(aiProds));
             });
         });
     });
