@@ -11,8 +11,8 @@ exports.data = [
       "url": "https://www.weg.de/",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   },
   {
     "id": "2",
@@ -26,8 +26,8 @@ exports.data = [
       "url": "https://www.stylight.de/Artikel/Gucci/Guertel-Gucci-Signature-Mit-G-Schnalle-3/",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   },
   {
     "id": "3",
@@ -41,8 +41,8 @@ exports.data = [
       "url": "https://www.stylight.de/Artikel/Zanfrini/Footwear-Courts-Su-Yoox-Com-4/",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   },
   {
     "id": "4",
@@ -56,8 +56,8 @@ exports.data = [
       "url": "https://www.stylight.de/Artikel/Hugo-Boss/Tanktop-Tank-Top-24-Aus-Baumwolle-In-Meliertem-Dessin1/",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   },
   {
     "id": "5",
@@ -71,8 +71,8 @@ exports.data = [
       "url": "https://www.weg.de/hotel/the-l-a-hotel-downtown-cid_618?cview=last-minute&travellers=25%2C25&city=960&region=404&country=US&from=2017-08-21&to=2017-08-27&gtm_pos=1#activeTab=1",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   },
   {
     "id": "6",
@@ -86,7 +86,7 @@ exports.data = [
       "url": "https://www.stylight.de/Artikel/Kaos/Pantaloni-Pantaloni640/",
       "source": "Editors' Choice"
     },
-    "start": 2824,
-    "end": 2852
+    "start": 0,
+    "end": 99999
   }
 ]
