@@ -35,17 +35,10 @@ module.exports = (req, res) => {
                     cb(null, products[0]);
                 });
             }, (err, result) => {
-                console.log(err, result);
+                if (!!err) res.sendStatus(400);
+                res.json(result);
             });
         });
     });
 
-    // products.brand.name
-    // products.name
-    // products.url
-    // p.images.url  , primary=true
-    // Category nicht in API
-
-
-    res.sendStatus(200);
 };
