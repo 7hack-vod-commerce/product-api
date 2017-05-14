@@ -28,13 +28,15 @@ module.exports = (req, res) => {
             async.map(tags, (t, cb) => {
                 const query = t.category + ' ' + t.detail;
                 s.products(query, productResult => {
+                    console.log(productResult);
                     var products = productResult.products.map(p => {
                         return {
                             brand: p.brand.name,
                             detail: p.name,
                             url: p.url,
                             image: p.images.filter(i => i.primary)[0].url,
-                            category: t.category.charAt(0).toUpperCase() + t.category.slice(1)
+                            category: t.category.charAt(0).toUpperCase() + t.category.slice(1),
+                            source: 'editorial'
                         };
                     });
                     cb(null, products[0]);
