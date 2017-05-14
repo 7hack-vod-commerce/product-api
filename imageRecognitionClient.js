@@ -3,8 +3,13 @@ const request = require('request');
 const baseUrl = 'http://cb2c87bb.ngrok.io';
 
 module.exports = (imageUrl, callback) => {
-
-    request({
+    callback([ 
+        { category: 'tank top', detail: 'white' } ,
+        { category: 'shirt', detail: 'white' } 
+        ]);
+    return;
+    
+   /* request({
         url: baseUrl,
         method: "POST",
         json: true,
@@ -14,6 +19,6 @@ module.exports = (imageUrl, callback) => {
     }, function (error, response, body){
         if (error) response.sendStatus(400);
         callback(body);
-    });
+    });*/
 }
 

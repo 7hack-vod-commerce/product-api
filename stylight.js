@@ -23,6 +23,8 @@ module.exports = class StylightApi {
             json: true
         };
 
+        console.log('GET: ' + path);
+
         const req = http.get(options, function (res) {
             res.setEncoding('utf-8');
 
@@ -42,7 +44,10 @@ module.exports = class StylightApi {
 
     // GET: /products
     products(query, callback) {
-        this.get(this.apiPath('/products', { search_string: query }), callback);
+        this.get(this.apiPath('/products', { 
+            search_string: query, 
+            page_items: 3
+        }), callback);
     }
 
     // /tags/filters
