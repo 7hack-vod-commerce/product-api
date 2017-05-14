@@ -8,7 +8,7 @@ exports.data = [
       "detail": "Los Angeles",
       "image": "http://finance.lacity.org/sites/g/files/wph641/f/styles/regular_hero/public/LA_Pano_0.JPG?itok=9DIiiZDv",
       "brand": "USA",
-      "url": "https://www.weg.de/",
+      "url": "https://www.weg.de/hotel/renaissance-los-angeles-airport-cid_23552?cview=last-minute&int_cid=navi~pauschalreisen~main&country=US&from=2017-05-27&to=2017-05-31&region=404&city=960&departureAirport=SXF%2CTXL%2CBRE%2CDTM%2CDRS%2CDUS%2CERF%2CFRA%2CHHN%2CFDH%2CHAM%2CHAJ%2CFKB%2CKSF%2CCGN%2CLEJ%2CLBC%2CCSO%2CFMM%2CMUC%2CFMO%2CNRN%2CNUE%2CPAD%2CRLG%2CSCN%2CSTR%2CZQW&plainDepartureAirport=Deutschland&travellers=25%2C25&gtm_pos=1#activeTab=1",
       "source": "Editors' Choice"
     },
     "start": 0,
